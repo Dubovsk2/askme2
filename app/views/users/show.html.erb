@@ -1,0 +1,20 @@
+<div class='container mb-sm user'>
+  <p class='title title-font'>User info</p>
+  <p><%= nickname_converter(@user.nickname) %><p>
+  <%= link_to 'Edit user', edit_user_registration_path  %>
+</div>
+<div class='container mb-sm'>
+  <p class='title-sm'>Ask your question:</p>
+</div>
+<div class='container mb-sm'>
+  <%= render 'questions/form' %>
+</div>
+<div class='container mb-sm'>
+  <p class='title-sm'><%= @user.nickname %>'s questions </p>
+</div>
+<% @questions.each do |q| %>
+  <div class='container mb-sm'>
+    <%= render partial: 'questions/question', locals:{ question: q } %>
+  </div>
+<% end %>
+

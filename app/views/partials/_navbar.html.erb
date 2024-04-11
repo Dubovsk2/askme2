@@ -1,0 +1,12 @@
+<div class='navbar mb'>
+  <ul>
+    <li><%= link_to 'Ask Me!', questions_path, class: 'title-sm text-bold title-font' %></li>
+    <% if current_user.present? %>
+      <li><%= link_to nickname_converter(current_user.nickname), user_path(current_user), class: 'mr-sm'%></li>
+      <li style="display:inline-block;"><%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'button button-main'%></li>
+    <% else %>
+      <li><%= link_to "Login", new_user_session_path, class: 'button button-yellow mr-sm'%></li>
+      <li><%= link_to "Register", new_user_registration_path, class: 'button button-main'%></li>
+    <% end %>
+  </ul>
+</div>

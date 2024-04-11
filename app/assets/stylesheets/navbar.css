@@ -1,0 +1,38 @@
+.navbar {
+  padding: 0px 20px;
+  align-items: center;
+  background-color: #370617;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #370617;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+  background-color: #111;
+}
+
+.footer {
+  background-color: #370617;
+  color: white;
+  text-align: center;
+}

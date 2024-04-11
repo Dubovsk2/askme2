@@ -1,0 +1,9 @@
+<div class='container mb-sm'>
+  <p class='title title-font text-bold'>Last 10 questions</p>
+</div>
+<% @questions.each do |q| %>
+  <div class='container mb-sm'>
+    <p class='mb-sm'>Question <%= link_to q.id, question_path(q)%></p>
+    <%= render partial: 'questions/question', locals:{ question: q } %>
+  </div>
+<% end %>

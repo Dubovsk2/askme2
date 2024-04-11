@@ -1,0 +1,18 @@
+<% if question.user == current_user %>
+  <div style="float:right;">
+    <%= link_to fa_icon("pencil"), edit_question_path(question), title: 'Edit' %>
+    <% eye_icon = question.hidden == true ? fa_icon("eye") : fa_icon("eye-slash") %> 
+    <div style="display:inline-block;"><%= button_to eye_icon, hidden_question_path(question), method: :patch, title: 'Hide/Unhide'  %></div>
+    <div style="display:inline-block;"><%= button_to fa_icon("trash"), question_path(question), method: :delete, title: 'Delete' %></div>
+  </div>
+<% end %>
+<% if question.author.present? %>
+  <p class='text-gray'>from <%= link_to nickname_converter(question.author.nickname), user_path(question.author) %></p>
+<% else %>
+  <p class='text-gray'>from Anonimous user</p>
+<% end %>
+<p><%= simple_format(question.body) %><p>
+<% if question.answer.present? %>
+  <%= simple_format(question.answer, class: 'text-orange pt-sm') %>
+<% end %>
+<p class='text-sm text-gray top-border pt-sm'><%= question.created_at.strftime("%d.%m.%Y %H:%M")%></p>

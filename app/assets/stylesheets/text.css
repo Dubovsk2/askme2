@@ -1,0 +1,43 @@
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.title-font {
+  font-family: 'Brush Script MT', cursive;
+}
+
+.title-lg {
+  font-size: 175%;
+}
+
+.title-md, .title {
+  font-size: 150%;
+}
+
+.title-sm {
+  font-size: 125%;
+}
+
+.text-sm {
+  font-size: 80%;
+}
+
+.text-gray {
+  color: gray;
+}
+
+.text-orange {
+  color: #e88413;
+}
+
+body {
+  color: #03071e;
+}
+
+a {
+  color: #dc2f02;
+}
+
+.transparent {
+  opacity: 0.5
+}

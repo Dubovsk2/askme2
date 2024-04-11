@@ -1,0 +1,7 @@
+<div class='mb-sm container'>
+  <p class='title title-font text-bold'>Question <%=@question.id%></p>
+  <p class='text-gray'>to: <%= link_to nickname_converter(@question.user.nickname), user_path(@question.user) %><p>
+</div>
+<div class='container'>
+  <%= render partial: 'question', locals:{ question: @question } %>
+</div>
