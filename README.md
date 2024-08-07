@@ -1,24 +1,13 @@
-# README
+The app where you can ask questions and get answers, made for goodprogrammer.ru course.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ubuntu 22.04
+Ruby 3.1 Rails 7.
 
-Things you may want to cover:
+Usage: Clone repo: git clone https://github.com/Dubovsk2/ask_me.git
 
-* Ruby version
+Enter the folder: cd ask_me
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
+Run: bundle, rails db:migrate, rails s
 * Deployment instructions
 
 * ...
